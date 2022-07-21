@@ -1,0 +1,28 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class table_account {
+   login: text
+   password: text
+   role_id: integer
+   is_active: integer
+   account_id: integer
+}
+class table_role {
+   role_name: text
+   role_id: integer
+}
+class table_user {
+   first_name: text
+   last_name: text
+   email: text
+   photo: text
+   user_id: integer
+}
+
+table_account  -[#595959,plain]-^  table_role    : "role_id"
+table_user     -[#595959,plain]-^  table_account : "user_id:account_id"
+@enduml
