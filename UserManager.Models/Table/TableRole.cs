@@ -20,15 +20,12 @@ public class TableRole : Db, IGetTable<Role>
         {
             while (_result.Read())
             {
-                list.Add(new Role
-                {
-                    Id = _result.GetInt32("role_id"),
-                    Name = _result.GetString("role_name")
-                });
+                list.Add(new Role { Id = _result.GetInt32("role_id"), Name = _result.GetString("role_name") });
             }
         }
+
         _db.Close();
-        
+
         return list;
     }
 }

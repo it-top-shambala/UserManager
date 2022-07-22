@@ -29,13 +29,15 @@ public class TableAccount : Db, IGetTable<Account>, IAddToTable<Account>
                 });
             }
         }
+
         _db.Close();
         return list;
     }
 
     public void AddToTable(Account obj)
     {
-        var sql = $"INSERT INTO table_account (login, password, role_id) VALUES ('{obj.Login}', '{obj.Password}', {obj.RoleId})";
+        var sql =
+            $"INSERT INTO table_account (login, password, role_id) VALUES ('{obj.Login}', '{obj.Password}', {obj.RoleId})";
         NonQuery(sql);
     }
 }

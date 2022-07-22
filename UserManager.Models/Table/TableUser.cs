@@ -9,8 +9,7 @@ public class TableUser : Db, IGetTable<User>, IAddToTable<User>
     public TableUser() : base()
     {
     }
-
-
+    
     public List<User> GetTable()
     {
         var list = new List<User>();
@@ -31,13 +30,15 @@ public class TableUser : Db, IGetTable<User>, IAddToTable<User>
                 });
             }
         }
+
         _db.Close();
         return list;
     }
 
     public void AddToTable(User obj)
     {
-        var sql = $"INSERT INTO table_user (first_name, last_name, email, photo) VALUES ('{obj.FirstName}', '{obj.LastName}', '{obj.Email}', '{obj.PhotoUrl}')";
+        var sql =
+            $"INSERT INTO table_user (first_name, last_name, email, photo) VALUES ('{obj.FirstName}', '{obj.LastName}', '{obj.Email}', '{obj.PhotoUrl}')";
         NonQuery(sql);
     }
 }

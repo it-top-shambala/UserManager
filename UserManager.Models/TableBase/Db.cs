@@ -13,12 +13,9 @@ public abstract class Db
     protected Db()
     {
         _db = new SqliteConnection(Conn);
-        _command = new SqliteCommand
-        {
-            Connection = _db
-        };
+        _command = new SqliteCommand { Connection = _db };
     }
-    
+
     protected void Query(string sql)
     {
         _db.Open();
