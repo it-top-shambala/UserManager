@@ -23,6 +23,6 @@ class table_user {
    user_id: integer
 }
 
-table_account  -[#595959,plain]-^  table_role    : "role_id"
+table_account  -[#595959,plain]-^  table_role    : "role_id:role_id"
 table_user     -[#595959,plain]-^  table_account : "user_id:account_id"
 @enduml
