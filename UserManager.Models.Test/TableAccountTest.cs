@@ -33,7 +33,7 @@ public class TableAccountTest
             }
         };
     }
-    
+
     [Fact]
     public void GetTable_Test()
     {
@@ -44,18 +44,13 @@ public class TableAccountTest
     [Fact]
     public void AddToTable_Test()
     {
-        var account = new Account { 
-            Login = "user",
-            Password = "123",
-            RoleId = 2,
-            IsActive = true 
-        };
-        
+        var account = new Account { Login = "user", Password = "123", RoleId = 2, IsActive = true };
+
         _expected.Add(account);
-        
+
         _tableAccount.AddToTable(account);
         var actual = _tableAccount.GetTable();
-        
+
         Assert.Equal(_expected, actual);
     }
 }
