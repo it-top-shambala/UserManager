@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManager.Models", "UserM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManager.Models.Test", "UserManager.Models.Test\UserManager.Models.Test.csproj", "{F27A0EA1-27AF-4C82-957A-14C1D775FB80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManager.App", "UserManager.App\UserManager.App.csproj", "{3D79D197-CD0C-405C-ADE1-502FBF9BEBC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{F27A0EA1-27AF-4C82-957A-14C1D775FB80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F27A0EA1-27AF-4C82-957A-14C1D775FB80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F27A0EA1-27AF-4C82-957A-14C1D775FB80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D79D197-CD0C-405C-ADE1-502FBF9BEBC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D79D197-CD0C-405C-ADE1-502FBF9BEBC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D79D197-CD0C-405C-ADE1-502FBF9BEBC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D79D197-CD0C-405C-ADE1-502FBF9BEBC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
