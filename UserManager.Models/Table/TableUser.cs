@@ -9,7 +9,7 @@ public class TableUser : Db, IGetTable<User>, IAddToTable<User>
     public TableUser() : base()
     {
     }
-    
+
     public List<User> GetTable()
     {
         var list = new List<User>();

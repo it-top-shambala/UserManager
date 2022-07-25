@@ -17,7 +17,7 @@ public class TableUserTest
                 Id = 1,
                 FirstName = "anonim",
                 LastName = "anonimus",
-                Email = "add@admin.ru",
+                Email = "anonim@admin.ru",
                 PhotoUrl = "url"
             },
             new()
