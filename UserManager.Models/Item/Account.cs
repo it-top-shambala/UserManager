@@ -20,7 +20,7 @@ public class Account : IEquatable<Account>
             return true;
         }
 
-        return Id == other.Id && Login == other.Login && Password == other.Password && RoleId == other.RoleId && IsActive == other.IsActive;
+        return Login == other.Login && Password == other.Password && RoleId == other.RoleId && IsActive == other.IsActive;
     }
 
     public override bool Equals(object? obj)
@@ -45,6 +45,6 @@ public class Account : IEquatable<Account>
 
     public override int GetHashCode()
     {
-        return HashCode.Combine(Id, Login, Password, RoleId, IsActive);
+        return HashCode.Combine(Login, Password, RoleId, IsActive);
     }
 }

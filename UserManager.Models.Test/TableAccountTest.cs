@@ -7,10 +7,13 @@ namespace UserManager.Models.Test;
 
 public class TableAccountTest
 {
-    [Fact]
-    public void GetTable_Test()
+    private List<Account> _expected;
+    private TableAccount _tableAccount;
+
+    public TableAccountTest()
     {
-        var expected = new List<Account>
+        _tableAccount = new TableAccount();
+        _expected = new List<Account>
         {
             new()
             {
@@ -29,8 +32,30 @@ public class TableAccountTest
                 IsActive = true
             }
         };
-        var tableAccount = new TableAccount();
-        var actual = tableAccount.GetTable();
-        Assert.Equal(expected, actual);
+    }
+    
+    [Fact]
+    public void GetTable_Test()
+    {
+        var actual = _tableAccount.GetTable();
+        Assert.Equal(_expected, actual);
+    }
+
+    [Fact]
+    public void AddToTable_Test()
+    {
+        var account = new Account { 
+            Login = "user",
+            Password = "123",
+            RoleId = 2,
+            IsActive = true 
+        };
+        
+        _expected.Add(account);
+        
+        _tableAccount.AddToTable(account);
+        var actual = _tableAccount.GetTable();
+        
+        Assert.Equal(_expected, actual);
     }
 }
