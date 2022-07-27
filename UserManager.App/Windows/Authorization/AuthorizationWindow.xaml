@@ -40,7 +40,8 @@
 
             <StackPanel Style="{DynamicResource StyleStackPanelHorizontalCenter}">
                 <Button x:Name="ButtonClear"
-                        Content="Очистить">
+                        Content="Очистить"
+                        Click="ButtonClear_OnClick">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}"
                                BasedOn="{StaticResource StyleButtonClear}">
@@ -61,7 +62,8 @@
                     </Button.Style>
                 </Button>
                 <Button x:Name="ButtonLogIn"
-                        Content="Войти">
+                        Content="Войти"
+                        Click="ButtonLogIn_OnClick">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}"
                                BasedOn="{StaticResource StyleButtonLogIn}">
