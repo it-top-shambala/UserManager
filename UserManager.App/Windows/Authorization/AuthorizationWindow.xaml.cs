@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using UserManager.App.Windows.User;
 using UserManager.Models.Table;
 
 namespace UserManager.App.Windows.Authorization
@@ -38,6 +39,18 @@ namespace UserManager.App.Windows.Authorization
                     "Успешная авторизация", 
                     MessageBoxButton.OK,
                     MessageBoxImage.Information);
+                
+                var role = new TableRole().GetTable().Find(r => r.Id == account.RoleId)?.Name;
+
+                switch (role)
+                {
+                    case "admin":
+                        new UserWindow().Show();
+                        break;
+                    case "user":
+                        new UserWindow().Show();
+                        break;
+                }
             }
         }
     }
