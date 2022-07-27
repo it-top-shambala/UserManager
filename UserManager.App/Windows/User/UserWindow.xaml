@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:UserManager.App.Windows.User"
+        xmlns:input="clr-namespace:UserManager.App.Components.InputText"
         mc:Ignorable="d"
         Title="UserWindow" Height="450" Width="800">
     <Grid>
@@ -18,40 +18,11 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1">
-            <StackPanel Orientation="Horizontal">
-                <Label x:Name="LabelLogin"
-                       Content="_Login"
-                       Target="{Binding ElementName=InputLogin}"/>
-                <TextBox x:Name="InputLogin"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal">
-                <Label x:Name="LabelPassword"
-                       Content="_Password"
-                       Target="{Binding ElementName=InputPassword}"/>
-                <PasswordBox x:Name="InputPassword"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal">
-                <Label x:Name="LabelLastName"
-                       Content="Last name"
-                       Target="{Binding ElementName=InputLastName}"/>
-                <TextBox x:Name="InputLastName"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal">
-                <Label x:Name="LabelFirstName"
-                       Content="First name"
-                       Target="{Binding ElementName=InputFirstName}"/>
-                <TextBox x:Name="InputFirstName"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal">
-                <Label x:Name="LabelEmail"
-                       Content="Email"
-                       Target="{Binding ElementName=InputEmail}"/>
-                <TextBox x:Name="InputEmail"/>
-            </StackPanel>
+            <input:InputTextComponent LabelContent="Login"/>
+            <input:InputTextComponent LabelContent="Password"/>
+            <input:InputTextComponent LabelContent="Last name"/>
+            <input:InputTextComponent LabelContent="First name"/>
+            <input:InputTextComponent LabelContent="Email"/>
 
             <StackPanel Orientation="Horizontal">
                 <Button x:Name="ButtonClear"
