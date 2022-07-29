@@ -15,7 +15,9 @@
 
         <StackPanel Grid.Column="0">
             <Image x:Name="UserPhoto"/>
-            <Button x:Name="ButtonChangePhoto"/>
+            <Button x:Name="ButtonChangePhoto"
+                    Content="New..."
+                    Click="ButtonChangePhoto_OnClick"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1">

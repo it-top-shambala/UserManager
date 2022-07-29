@@ -15,4 +15,8 @@
       <Content Include="bin\Debug\net6.0-windows\users.db" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="bin\Debug\net6.0-windows\photos" />
+    </ItemGroup>
+
 </Project>
