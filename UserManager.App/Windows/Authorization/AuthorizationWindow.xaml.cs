@@ -52,6 +52,7 @@ namespace UserManager.App.Windows.Authorization
                         new UserWindow(account.Id).Show();
                         break;
                 }
+                Close();
             }
         }
     }
