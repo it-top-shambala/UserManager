@@ -1,0 +1,50 @@
+﻿<Window x:Class="UserManager.App.Windows.Admin.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:UserManager.App.Windows.Admin"
+        xmlns:inputText="clr-namespace:UserManager.App.Components.InputText"
+        mc:Ignorable="d"
+        Title="AdminWindow" Height="450" Width="800"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="2.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView Grid.Column="0"
+                  ItemsSource="{Binding Accounts}"
+                  SelectionChanged="Selector_OnSelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Login"
+                                    DisplayMemberBinding="{Binding Login}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Grid.Column="1">
+            <inputText:InputTextComponent x:Name="Login"
+                                      LabelContent="Login" />
+            <inputText:InputTextComponent x:Name="Password"
+                                      LabelContent="Password" />
+            <inputText:InputTextComponent x:Name="LastName"
+                                      LabelContent="Last name"/>
+            <inputText:InputTextComponent x:Name="FirstName"
+                                      LabelContent="First name" />
+            <inputText:InputTextComponent x:Name="Email"
+                                      LabelContent="Email" />
+
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="ButtonClear"
+                        Content="Clear"/>
+                <Button x:Name="ButtonSave"
+                        Content="Save"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>
+
