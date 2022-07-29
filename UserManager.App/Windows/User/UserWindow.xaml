@@ -5,7 +5,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:input="clr-namespace:UserManager.App.Components.InputText"
         mc:Ignorable="d"
-        Title="UserWindow" Height="450" Width="800">
+        Title="UserWindow" Height="450" Width="800"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -18,17 +19,23 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1">
-            <input:InputTextComponent LabelContent="Login"/>
-            <input:InputTextComponent LabelContent="Password"/>
-            <input:InputTextComponent LabelContent="Last name"/>
-            <input:InputTextComponent LabelContent="First name"/>
-            <input:InputTextComponent LabelContent="Email"/>
+            <input:InputTextComponent x:Name="Login"
+                                      LabelContent="Login" />
+            <input:InputTextComponent x:Name="Password"
+                                      LabelContent="Password" />
+            <input:InputTextComponent x:Name="LastName"
+                                      LabelContent="Last name"/>
+            <input:InputTextComponent x:Name="FirstName"
+                                      LabelContent="First name" />
+            <input:InputTextComponent x:Name="Email"
+                                      LabelContent="Email" />
 
             <StackPanel Orientation="Horizontal">
                 <Button x:Name="ButtonClear"
                         Content="Clear"/>
                 <Button x:Name="ButtonSave"
-                        Content="Save"/>
+                        Content="Save"
+                        Click="ButtonSave_OnClick"/>
             </StackPanel>
         </StackPanel>
     </Grid>

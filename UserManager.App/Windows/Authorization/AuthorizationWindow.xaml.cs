@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using UserManager.App.Windows.Admin;
 using UserManager.App.Windows.User;
 using UserManager.Models.Table;
 
@@ -45,10 +46,10 @@ namespace UserManager.App.Windows.Authorization
                 switch (role)
                 {
                     case "admin":
-                        new UserWindow().Show();
+                        new AdminWindow().Show();
                         break;
                     case "user":
-                        new UserWindow().Show();
+                        new UserWindow(account.Id).Show();
                         break;
                 }
             }

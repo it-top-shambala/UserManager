@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace UserManager.App.Components.InputText;
@@ -18,20 +19,20 @@ public partial class InputTextComponent : UserControl, INotifyPropertyChanged
             OnPropertyChanged(nameof(LabelContent));
         }
     }
-    
-    private string _input;
+
+    private string _inputText;
     public string InputText
     {
-        get => _input;
+        get => _inputText;
         set
         {
             if (value is null) return;
-            if (value == _input) return;
-            _input = value;
+            if (value == _inputText) return;
+            _inputText = value;
             OnPropertyChanged(nameof(InputText));
         }
     }
-    
+
     public InputTextComponent()
     {
         InitializeComponent();
