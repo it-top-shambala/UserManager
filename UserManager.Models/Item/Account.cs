@@ -8,19 +8,7 @@ public class Account : IEquatable<Account>
     public int RoleId { get; set; }
     public bool IsActive { get; set; }
 
-    public bool Equals(Account? other)
-    {
-        if (ReferenceEquals(null, other))
-        {
-            return false;
-        }
-
-        if (ReferenceEquals(this, other))
-        {
-            return true;
-        }
-
-        return Login == other.Login && Password == other.Password && RoleId == other.RoleId && IsActive == other.IsActive;
+    public bool Equals(Account? other) {if (ReferenceEquals(null, other)){return false;}if (ReferenceEquals(this, other)){return true;}return Login == other.Login && Password == other.Password && RoleId == other.RoleId && IsActive == other.IsActive;
     }
 
     public override bool Equals(object? obj)
